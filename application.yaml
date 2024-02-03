@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+      
+okta:
+  oauth2:
+    issuer: https://dev-15585796.okta.com/oauth2/default
+    audience: api://default
+spring:
+  zipkin:
+    baseUrl: http://zipkin-svc:9411
